@@ -1,3 +1,9 @@
-fileData = "test file"
-files = ['./aaa', './bbb']
-File.open(files, 'wb') { |f| f.write(fileData) }
+#!/usr/bin/ruby
+
+file = open(ARGV[0])
+file.readline
+file.each do |line|
+  k, v = line.split
+  puts k
+  puts v
+end

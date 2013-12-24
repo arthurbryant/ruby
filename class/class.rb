@@ -15,9 +15,19 @@ class HI
         @name = name
     end
 
+    def self.static_method1
+      puts "static method1"
+    end
+
+    def HI.static_method2
+      puts "static method2"
+    end
+
     attr_reader :name
 end
 
+HI.static_method1
+HI.static_method2
 h = HI.new("arthur")
 puts h.getName
 h2 = HI.new
@@ -52,3 +62,10 @@ end
 
 s = String.new("shit")
 puts s.string_shuffle
+
+person = "arthur"
+person2 = person.dup
+person.freeze
+person[0] = 'A'
+puts person
+puts person2

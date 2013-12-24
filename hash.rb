@@ -24,3 +24,8 @@ array.collect! do |n|
 end
 puts array.inspect
 
+with_default = Hash.new(0)
+p with_default['count']
+with_default['count'] += 1
+p with_default['count']
+
