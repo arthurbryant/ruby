@@ -15,3 +15,8 @@ end
 p @arr
 @arr[2] = 100
 p @arr.inspect
+
+@inc = 1
+@inc += 1
+
+puts (@inc)
