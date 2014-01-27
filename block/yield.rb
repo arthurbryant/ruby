@@ -5,6 +5,6 @@ def test_block
   puts "end"
 end
 
-test_block { puts "block"}
+test_block { puts "block" }
 puts "-------------------------"
 test_block { |key, value| puts "#{key} => #{value}"}

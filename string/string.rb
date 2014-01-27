@@ -1,3 +1,4 @@
+#!/usr/bin/ruby
 #coding: utf-8
 
 require "kconv"
@@ -27,3 +28,12 @@ print "\n"
 for i in range2 do
     print "#{i}\n";
 end
+
+# end of string
+str = <<End_Of_String
+You can define the end mark of string by yourselfn
+End_Of_String
+puts RUBY_VERSION
+puts RUBY_PLATFORM
+puts "Encoding of #{str.inspect} is #{str.encoding}"
+
