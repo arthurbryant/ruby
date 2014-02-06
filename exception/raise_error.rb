@@ -1,10 +1,16 @@
 #!/usr/bin/ruby
 
 def upload
-  begin
-    if 1
-      rails
-    end
-  rescue
+  if 1
+    raise "limit"
   end
 end
+
+begin
+  upload
+rescue Exception => e
+  if e.message == 'limit'
+    puts "over"
+  end
+end
+
