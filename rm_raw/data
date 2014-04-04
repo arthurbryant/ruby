@@ -1,0 +1,27 @@
+app/views/apps/_first_guide.html.erb:          <%= t '.instruction_html') %>
+app/views/apps/_first_guide.html.erb:          <%= t '.instruction_html') %>
+app/views/apps/_tester_guide.html.erb:        <%= t '.instruction_android_html') %>
+app/views/apps/_tester_guide.html.erb:        <%= t '.instruction_android_html') %>
+app/views/apps/_tester_guide.html.erb:        <%= t '.instruction_html') %>
+app/views/apps/_tester_guide.html.erb:        <%= t '.instruction_html') %>
+app/views/apps/invitation.html.erb:            <%= raw t '.message', :inviter => @invitation.user.name, :app_name => @app.name %>
+app/views/binaries/provisioned_iphones.html.erb:      <%= raw t('.instruction') %>
+app/views/devices/show.html.erb:      <%= raw t '.distribution_description', :app_name => @app.name, :app_owner => @app.user.name, :revision => @binary.revision, :version_name => @binary.version_name, :version_code => @binary.version_code, :identifier => @device_identifier %>
+app/views/devices/show.html.erb:      <%= raw t '.distribution_description', :app_name => @app.name, :app_owner => @app.user.name, :revision => @active_revision, :version_name => '-', :version_code => '-', :identifier => @device_identifier %>
+app/views/devices/show.html.erb:      <%= raw t '.distribution_empty_description', :identifier => @device_identifier %>
+app/views/distributions/_first_guide.html.erb:        <%= raw t '.message' %>
+app/views/distributions/appearances/index.html.erb:          <%= raw t '.lead_text' %>
+app/views/distributions/appearances/index.html.erb:          <%= raw t ('.custom_background_image') %>
+app/views/distributions/appearances/index.html.erb:          <%= form.check_box :backimage_repeat_enable,{:checked => @form_distribution.backimage_repeat_enable},true,false %> <%= raw t ('.repeat_image') %>
+app/views/distributions/appearances/index.html.erb:          <%= raw t '.guide' %>
+app/views/distributions/appearances/index.html.erb:          <%= raw t '.share' %>
+app/views/distributions/comments/_entry.html.erb:            <%= raw t '.reply_indicator', :name => display_name(entry.parent.author_name) %>
+app/views/distributions/show.html.erb:      background: url(<%= raw @distribution.backimage_url %>);
+app/views/distributions/show.html.erb:      background: url(<%= raw @distribution.backimage_url %>) no-repeat center center;
+app/views/distributions/statistics.html.erb:          <i class="icon-info-sign"></i> <%= raw t '.no_launch_report_notice' %> <%= link_to t('.learn_more'), docs_sdk_path %>
+app/views/iphones/connect.html.erb:    <p><%= raw t '.instruction' %></p>
+app/views/iphones/connect.html.erb:    <p><%= raw t '.after_installation' %></p>
+app/views/iphones/connect.html.erb:    <p><%= raw t '.install_apps' %></p>
+app/views/iphones/detail.html.erb:          <p class="notice"><%= raw t('.device_family_notice', targeted_device: device_families[@binary_device_family], current_device: device_families[@device_family]) %></p>
+app/views/iphones/detail.html.erb:          <p class="notice"><%= raw t('.deployment_target_notice', targeted_os_version: @target_os_version, current_os_version: @device_os_version) %></p>
+app/views/iphones/detail.html.erb:            <p class="notice"><%= raw t('.over_size_notice') %></p>

@@ -10,7 +10,8 @@ begin
   upload
 rescue Exception => e
   if e.message == 'limit'
-    puts "over"
+    STDERR.puts "over"
+    #STDERR.puts $!
   end
 end
 
