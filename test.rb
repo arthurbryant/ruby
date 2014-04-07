@@ -1,14 +1,31 @@
- def add_icon(activity_list)
-    activity_list.each do |a|
-      a[:add] = "add"
-    end
-    return activity_list
+def time(&block)
+  require 'benchmark'
+  result = nil
+  timing = Benchmark.measure do
+    result = block.()
   end
+  puts "It took: #{result}"
+  result
+end
 
-list = [
-  { :name => 'a', :age => 20},
-  { :name => 'a', :age => 21}
-]
-puts list
-list = add_icon(list)
-puts list
+while line = DATA.gets
+  puts line
+end
+
+BEGIN {
+  puts "start 1"
+}
+BEGIN {
+  puts "start 2"
+}
+
+END {
+  puts "clear 2"
+}
+
+END {
+  puts "clear 1"
+}
+__END__
+puts "hello"
+puts "world"
