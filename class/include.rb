@@ -12,6 +12,11 @@ class Dev
   attr_reader :name
   def initialize(name)
     @name = name
+    print
+  end
+
+  def print
+    puts "new Dev print"
   end
 end
 

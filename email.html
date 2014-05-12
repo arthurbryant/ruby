@@ -1,0 +1,52 @@
+<html>
+<head>
+  <link rel="stylesheet" href="user_email.css" type="text/css">
+</head>
+<body>
+<table>
+  <tbody>
+  <tr>
+    <td align="left" width="70px">
+      <%= image_tag @app.icon_path, :style => 'padding-left: 10px;' %>
+    </td>
+    <td align="left" style="padding-left: 10px; margin: auto">
+      <h3><%= @app.name %></h3>
+      <ul style="padding-left: 0px; font-size: small">
+        <li>
+          <em>os</em>&nbsp;<%= @app.os_name %>
+        </li>
+        <li>
+          <em>from</em>&nbsp;<%= @inviter.name %>
+        </li>
+      </ul>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<br/>
+<table>
+  <tbody>
+  <tr>
+    <td style="width: 100%">
+      You can download the app via "DeployGate".<br/>
+      Please follow the procedure below:<br/>
+    </td>
+
+  <tr>
+    <td class="titleButton">
+      <strong><a href="<%= @beta_program_url %>" class="button" >1. Join Beta Program</a></strong>
+    </td>
+  </tr>
+  <tr>
+    <td class="titleButton">
+      <strong><a href="<%= connect_iphones_url %>" class="button">2. Install DeployGate</a></strong>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<div><em>(You need to open the link with Safari, because the website requires you to install a configuration profile.)</em></div>
+<td class="installButton" align="right">
+  <strong><a href="<%= @app_link %>" class="button">Download</a></strong>
+</td>
+</body>
+</html>
