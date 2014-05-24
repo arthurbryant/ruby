@@ -1,17 +1,15 @@
 #!/usr/bin/ruby
 
 def upload
-  if 1
-    raise "limit"
-  end
+  1 / 0
 end
 
 begin
   upload
 rescue Exception => e
-  if e.message == 'limit'
-    STDERR.puts "over"
-    #STDERR.puts $!
-  end
+  STDERR.puts e.message
+  STDERR.puts $!
+  STDERR.puts e.backtrace
+  STDERR.puts $@
 end
 

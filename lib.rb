@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
 
-$: << File.dirname('~/home/javascript/css')
+$: << File.dirname('~/home/ruby/lib//')
 puts $:
-require_relative 'other.rb'
-test_ruby_lib
+require_relative 'lib/test_lib.rb'
+test_lib()
 
