@@ -1,7 +1,7 @@
 module User
-  #def self.included(base)
-  #  base.extend ClassMethods
-  #end
+  def self.included(base)
+    base.extend ClassMethods
+  end
 
   module ClassMethods
     def get
@@ -13,11 +13,11 @@ module User
 end
 
 class Test
-  #include User
+  include User
 
-  #def self.show
-  #  puts get
-  #end
+  def self.show
+    puts get
+  end
 
   def show2
     puts User::get
