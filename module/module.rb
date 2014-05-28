@@ -26,4 +26,4 @@ m = Magazine.new
 #m.base
 #m.test_module
 Magazine::base
-
+Magazine::Paper::test_module
