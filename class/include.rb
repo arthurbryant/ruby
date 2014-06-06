@@ -33,3 +33,16 @@ dev = Dev.new("dev")
 product = Product.new("product")
 dev.print
 product.print
+
+module A
+  CONST = "A"
+end
+
+class A::C
+  def self.print
+    puts "A::C"
+  end
+end
+
+p A::CONST
+A::C.print
