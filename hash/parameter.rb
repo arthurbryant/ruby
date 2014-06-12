@@ -9,3 +9,13 @@ end
 
 test(:name => "arthur", :age => 13)
 test(hash)
+
+def test_parameter(msg)
+  p msg['args'][0]
+  p msg['args'][1]
+end
+
+msg = {"args" => [1, 2]}
+test_parameter(msg)
+
+
