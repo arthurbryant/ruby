@@ -39,5 +39,5 @@ m = Magazine.new
 #m.base
 #m.test_module
 Magazine::base
-Magazine::Paper::test_module
+#Magazine::Paper::test_module
 Magazine::test_module2

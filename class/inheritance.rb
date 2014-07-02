@@ -17,3 +17,7 @@ puts Child.superclass
 puts Parent.superclass
 puts Parent.superclass.superclass
 puts Parent.superclass.superclass.superclass
+
+puts c.class < Parent
+puts c.class < Child
+puts c.class < Object
