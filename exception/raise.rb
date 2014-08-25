@@ -1,3 +1,17 @@
+class NilError < StandardError; end
+class OutOfBoundError < StandardError; end
+class TestRescue
+  def test_error
+    begin
+      raise OutOfBoundError
+    rescue NilError
+      puts "Nil error"
+    rescue OutOfBoundError
+      puts "out of bound error"
+    end
+  end
+end
+
 class Test
   def call_sub
     begin
@@ -22,3 +36,5 @@ end
 
 t = Test.new
 t.call_sub
+
+tr = TestRescue.new.test_error
