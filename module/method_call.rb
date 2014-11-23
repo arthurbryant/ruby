@@ -30,7 +30,9 @@ module TestModule
   end
 end
 
+# cannot use without included
 include TestModule
+TestModule.sin
 
 module TestModuleFunction
   def sin
@@ -39,5 +41,5 @@ module TestModuleFunction
   module_function :sin
 end
 
+# module_function can be used without included
 TestModuleFunction.sin
-include TestModuleFunction
