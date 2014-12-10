@@ -1,10 +1,14 @@
+require 'pp'
+
 class Test
-  def self.hello
-    puts "test #{self}"
+  def hello
+    puts self.inspect
   end
 end
 
-m = Test.dup
-#m.hello
-c = Test.clone
-c.hello
+obj = Test.new
+obj2 = obj.dup
+obj3 = obj.clone
+obj.hello
+obj2.hello
+obj3.hello

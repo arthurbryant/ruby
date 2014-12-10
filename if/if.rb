@@ -1,18 +1,8 @@
 #!/usr/bin/ruby
 
-result = 
-  if true
-    100
+m = [10, 2, 3, 4].select do |v|
+  if v % 2 == 1
+    v
   end
-puts result
-
-result = 
-  if false 
-    200
-  end
-if result.nil?
-  puts "wrong:
-else
-  puts "ok"
 end
-
+p m

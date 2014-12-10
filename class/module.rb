@@ -19,8 +19,9 @@ class Test
   include User
 
   def show
+    puts self.get
     puts get
-    puts User::ClassMethods::get
+    #puts User::ClassMethods::get
   end
 end
 

@@ -1,25 +1,6 @@
-module Paper
-  def base
-    puts "paper"
-  end
+require_relative 'paper'
 
-  def Paper.test_module
-    puts "paper test module"
-  end
-
-  def self.test_module2
-    puts "module function 2"
-  end
-
-  def test_module3
-    puts "moudle function 3"
-  end
-  module_function :test_module3
-end
-
-Paper::test_module
-Paper::test_module2
-Paper::test_module3
+include Paper
 
 class Book
   # Module method will become class instance method
@@ -40,4 +21,5 @@ m = Magazine.new
 #m.test_module
 Magazine::base
 #Magazine::Paper::test_module
-Magazine::test_module2
+#Magazine::test_module2
+hello
