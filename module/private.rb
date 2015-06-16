@@ -20,5 +20,5 @@ end
 
 book = Book.new
 book.base
-book.protected_test
-book.privaet_test
+#book.protected_test
+#book.privaet_test
