@@ -1,13 +1,8 @@
 #!/usr/bin/env ruby
 
-def return_value
-  result = 2
-  if false
-    1
-  end
+def return_two
+  return 1, 2
 end
 
-result = return_value
-if result.nil?
-  puts "return nil"
-end
+first, second = return_two
+puts first, second
