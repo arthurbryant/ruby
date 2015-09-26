@@ -19,3 +19,15 @@ puts result[1]
 not_greedy = str.match(/<(.*?)>/)
 puts not_greedy[0]
 puts not_greedy[1]
+
+#!/usr/bin/ruby
+
+text = "rails are rails, really good Ruby on Rails"
+
+# Change "rails" to "Rails" throughout
+text.gsub!('rails', 'Rails')
+puts text
+
+# Capitalize the word "Rails" throughout
+text.gsub!(/\brails\b/i, "RAILS")
+puts text
