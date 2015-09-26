@@ -3,10 +3,6 @@ class HI
         @name = name
     end
 
-    def init(name = "arthur")
-        puts "hello, #{name}"
-    end
-
     def getName
         puts @name
     end
@@ -28,13 +24,6 @@ end
 
 HI.static_method1
 HI.static_method2
-h = HI.new("arthur")
-puts h.getName
-h2 = HI.new
-puts h2.getName
-h2.setName("bryant")
-puts h2.name
-
 
 class User
   attr_accessor :name, :email
@@ -45,27 +34,12 @@ class User
   end
 end
 
-u = User.new({ :name => "arthur", :email => "cst.feng@gmail.com" })
-puts "#{u.name} #{u.email}"
-
-def string_shuffle(s)
-  s.split('').shuffle.join
-end
-
-puts string_shuffle("foobar")
-
-class String
-  def string_shuffle
-    self.split('').shuffle.join
-  end
-end
-
-s = String.new("shit")
-puts s.string_shuffle
+user = User.new({:name => "arthur", :email => "cst.feng@gmail.com"})
+puts "Name: #{user.name}, Email: #{user.email}"
 
 person = "arthur"
-person2 = person.dup
+person_dup = person.dup
 person.freeze
-person[0] = 'A'
-puts person
-puts person2
+# Can not change freeze variable
+# person[0] = 'A'
+puts person, person_dup

@@ -2,6 +2,7 @@
 
 File.open('split.rb') do |file|
   file.each do |line|
+    puts line
     if result = line.match(/(.*)email\((.*)\)(.*)/)
       # the whole match is stored in result[0] as default
       puts result[0]

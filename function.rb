@@ -1,12 +1,17 @@
-search_engine = 
-    %w[Google Yahoo].map do |engine|
-    "http://www." + engine + ".com" 
-end;
+#!/usr/bin/env ruby
 
-def test_return
-  return;
+def search_engine
+  %w[Google Yahoo].map do |engine|
+    "http://www." + engine + ".com"
+  end
 end
 
-output = test_return();
-puts output;
-puts "nil" if output == nil
+def add(x, y)
+  s = x + y
+end
+
+result = search_engine
+puts result
+
+result = add(10, 11)
+puts result
