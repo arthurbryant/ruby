@@ -1,18 +1,20 @@
 #!/usr/bin/ruby
 
-# ARGV.each do |argv|
-#   puts argv
-# end
+ips = [
+  '52.193.98.215',
+  '52.193.98.216',
+  '52.193.98.217'
+]
 
-ARGF.each do |file|
-  puts file
+File.open('./ip', 'w') do |f|
+  ips.map {|ip| f.puts ip}
 end
 
-file = File.open('data.txt')
-while line = file.gets
-  puts line
+ips = []
+File.open('./ip') do |f|
+  while line = f.gets
+    ips << line.chomp
+  end
 end
 
-file = File.open('data.txt', 'w')
-file.write('arthur')
-file.close
+puts ips.inspect
