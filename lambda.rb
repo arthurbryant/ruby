@@ -14,5 +14,9 @@ ActiveRecord::Base.establish_connection(
 class User < ActiveRecord::Base
 end
 
-puts "User number: #{User.all.size}"
+class Profile < ActiveRecord::Base
+end
+
+puts "User number: #{User.count}"
+puts "User number: #{User.first.id}"
 puts "Hello '#{Faker::Name.name}' from Ruby!"
