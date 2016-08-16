@@ -18,4 +18,13 @@ end
 msg = {"args" => [1, 2]}
 test_parameter(msg)
 
+def make_alert(message = "", options = {})
+  puts message
+  options.each do |k, v|
+    print k, " => ", v
+    puts
+  end
+end
+
+make_alert('User not exist', "errors" => ['User not exist'])
 
