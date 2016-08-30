@@ -2,22 +2,24 @@
 
 # return to the call method
 def test_lambda
-  lambda { return "Exit from lambda." }.call
-  return "Exit from lambda method"
+  lambda { p "Exit from lambda." and return }.call()
+  p "Exit from lambda method" and return
 end
 
-puts test_lambda
+test_lambda
 
 # return and exit the call method
 def test_proc
-  Proc.new { return "Exit from proc." }.call
-  puts "Exit from proc method"
+  Proc.new { p "Exit from proc." and return }.call
+  p "Exit from proc method" and return
 end
 
-puts test_proc
+test_proc
 
 lambda1 = ->(a, b) {a + b}
-puts lambda1.call(1, 4)
+# error
+# lambda1 = ->(a, b, c) {a + b}
+p lambda1.call(1, 4)
 
-proc = proc {|a, b| a*b}
-puts proc.call(2, 5)
+proc = Proc.new {|a, b, c| p a*b; }
+proc.call(2, 5)
