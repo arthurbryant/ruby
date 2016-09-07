@@ -9,9 +9,18 @@ def two
 end
 
 result1 = one two { "arthur" }
-# == (one two) block
 result2 = one two do
   "arthur"
 end
-puts result1
-puts result2
+
+p result1
+p result2
+
+
+def pay_hander(&block)
+  yield if block_given?
+end
+
+pay_hander do
+  p "authorize"
+end

@@ -1,17 +1,10 @@
 class Test
-  attr_accessor :jid
-  def test1
-    @str = "string"
-  end
+  attr_accessor :id
 
-  def print_str
-    puts @str
+  def initialize(id=nil)
+    @id = id
   end
 end
 
-test = Test.new
-test.print_str
-test.test1
-test.print_str
-test.jid = 100
-puts test.jid
+t= Test.new(200)
+p t.id
