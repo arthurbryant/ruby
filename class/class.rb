@@ -35,11 +35,5 @@ class User
 end
 
 user = User.new({:name => "arthur", :email => "cst.feng@gmail.com"})
-puts "Name: #{user.name}, Email: #{user.email}"
-
-person = "arthur"
-person_dup = person.dup
-person.freeze
-# Can not change freeze variable
-# person[0] = 'A'
-puts person, person_dup
+user.instance_variable_set("@sex", 'male')
+puts "Name: #{user.name}, Email: #{user.email}, Sex: #{user.sex}"
