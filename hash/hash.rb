@@ -1,6 +1,7 @@
 # coding: utf-8
 
 hash = {"name" => "arthur", "age" => 28};
+p hash.values_at("name", "age")
 print hash["name"];
 print hash.fetch("age");
 print "\n";

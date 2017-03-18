@@ -7,11 +7,7 @@ def fun(id, count)
   end
 end
 
-thread1 = Thread.new{ fun(1, 100) }
-thread2 = Thread.new{ fun(2, 100) }
-thread3 = Thread.new{ fun(2, 100) }
-thread4 = Thread.new{ fun(2, 100) }
+thread1 = Thread.new{ fun(1, 5) }
+thread2 = Thread.new{ fun(2, 5) }
 thread1.join
 thread2.join
-thread3.join
-thread4.join

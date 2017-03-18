@@ -1,18 +1,46 @@
-def test_block
-  yield('name', 'arthur')
-  yield('age', 25)
-  yield data
+#!/usr/bin/env ruby
+
+def yield_test(*args)
+  p *args.inspect
+  tmp = yield
+  puts "tmp = #{tmp}"
 end
 
-test_block { puts "block" }
-puts "-------------------------"
-test_block { |key, value| puts "#{key} => #{value}"}
+yield_test(1, 2) { puts "helo, yield"; 0 }; puts
+
+
+def callback()
+  p 'start callback'
+  yield
+  p 'end callback'
+end
+
+callback {p 'callback block'};  puts
+
+def show
+  p 'callback method'
+end
+
+callback {show }; puts
+
+def square(x)
+  x * x
+end
+
+def result
+  (90..100).each do |i|
+    p yield i
+  end
+end
+
+result {|i| square i; }; puts
 
 def yield_data(data)
   yield data
 end
 
-result = [1,2,3,4].each do |data|
-  data
+(1..10).each do |i|
+  yield_data(i) do
+    p i
+  end
 end
-p result
