@@ -8,7 +8,6 @@ end
 
 yield_test(1, 2) { puts "helo, yield"; 0 }; puts
 
-
 def callback()
   p 'start callback'
   yield

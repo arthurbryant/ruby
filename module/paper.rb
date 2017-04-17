@@ -4,19 +4,28 @@ module Paper
   end
 
   def Paper.test_module
-    puts "paper test module"
+    puts "test module"
   end
 
   def self.test_module2
     puts "module function 2"
   end
 
-  def test_module3
-    puts "moudle function 3"
-  end
-  module_function :test_module3
-
   def hello
     puts "hello paper"
   end
+
+  def test_module3
+    puts "moudle function 3"
+    hello
+  end
+  module_function :test_module3
+  private :hello
+
 end
+
+Paper.test_module
+Paper.test_module2
+Paper.test_module3
+Paper.hello
+#Paper.base

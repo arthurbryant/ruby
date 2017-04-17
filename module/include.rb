@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 module M
-
   def self.included(base)
     base.extend ClassMethods
   end
