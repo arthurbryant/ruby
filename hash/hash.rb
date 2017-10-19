@@ -30,3 +30,8 @@ p with_default['count']
 with_default['count'] += 1
 p with_default['count']
 
+
+limits = {'8' => 200, '7' => 5}
+level, num = ARGV[1], ARGV[2]
+puts level
+puts num
