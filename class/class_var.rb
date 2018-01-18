@@ -1,13 +1,16 @@
 #!/usr/bin/ruby
 
-class Test
-  def self.print
-    puts "call print"
-  end
+class Parent
+  @@var = "Parent"
 
-  def self.test
-    print
+  def self.print_class_var
+    puts @@var
   end
 end
 
-Test.test
+class Child < Parent
+  @@var = "Child"
+end
+
+Parent.print_class_var
+Child.print_class_var
