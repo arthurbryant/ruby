@@ -6,11 +6,12 @@ module M
   end
 
   module ClassMethods
-  def initialize
-    super
-    puts "start to initialize"
-    @@dynamo_db = 'first'
-  end
+    def initialize
+      super
+      puts "start to initialize"
+      @@dynamo_db = 'first'
+    end
+
     def dynamo
       if @@dynamo_db.nil?
         @@dynamo_db= 'dynamo'
@@ -32,3 +33,6 @@ end
 
 f = Foo.new
 f.print
+
+puts M.class
+puts M.instance_methods

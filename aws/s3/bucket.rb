@@ -14,7 +14,7 @@ bucket.objects.with_prefix('job-output/hourlySummary/20160425/').each do |object
    table = CSV.new(object.read).read
         hourly_uid_map =  Hash.new(0)
         max_count_in_hour = 4
-        
+
         # MySQL にログを一旦保存
         bulk = Array.new
         table.each_with_index do |row, idx|
