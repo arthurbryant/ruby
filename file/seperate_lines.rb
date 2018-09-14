@@ -1,9 +1,9 @@
 #!/usr/bin/ruby
 
 result = ''
-seperator = '|'
+seperator = ' | '
 puts ARGV
-File.open(ARGV[0], 'r') do |f|
+File.open(ARGV[0], 'rb') do |f|
   while line = f.gets
     result += line.chomp + seperator
     puts line
