@@ -19,3 +19,9 @@ puts :"+google".object_id
 puts :"+google".object_id
 puts :"+google".object_id
 puts :"+google".object_id
+
+def test(name:, age:)
+  puts "name: #{name}, age: #{age}"
+end
+
+test(name: 'Arthur', age: 32)

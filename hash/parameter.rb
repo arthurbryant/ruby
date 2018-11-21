@@ -27,4 +27,3 @@ def make_alert(message = "", options = {})
 end
 
 make_alert('User not exist', "errors" => ['User not exist'])
-
