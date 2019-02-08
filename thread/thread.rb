@@ -1,8 +1,10 @@
+#!/usr/bin/env ruby
+
 def fun(id, count)
   i = 0
   while(i < count)
     puts "thread #{id} time: #{Time.now}"
-    sleep(1)
+    sleep(0.1)
     i += 1
   end
 end
