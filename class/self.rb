@@ -2,15 +2,14 @@
 
 class Test
   def self.test
-    puts "test"
-    test2
+    puts "10"
   end
 
-  private
-
-  def self.test2
-    puts "test2"
+  def self.test=(x)
+    puts "#{x}"
   end
+
 end
 
+Test.test = 1
 Test.test
