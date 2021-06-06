@@ -1,11 +1,18 @@
 #!/usr/bin/ruby
 
-class User
-  attr_accessor :name
+def create_counter
+  count = 1
 
-  def initlize
-    name = name
+  return Proc.new do
+    count += 1
+    puts count
   end
 end
 
-user1 = User.new('arthur')
+c = create_counter
+c.call
+c.call
+
+c2 = create_counter
+c2.call
+c2.call

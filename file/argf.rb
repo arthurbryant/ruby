@@ -1,18 +1,10 @@
 #!/usr/bin/ruby
 
-# ARGV.each do |argv|
-#   puts argv
-# end
-
-ARGF.each |file|
-  puts file.filename
-  puts file
+ARGV.each do |argv|
+  puts argv
 end
 
-# file = open(ARGV[0])
-# file.readline
-# file.each do |line|
-#   k, v = line.split
-#   puts k
-#   puts v
-# end
+ARGF.each do |f|
+  puts f.filename
+  puts f
+end
